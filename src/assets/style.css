@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+header {
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 1rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+li + li {
+  margin-top: 0.5rem;
+}
