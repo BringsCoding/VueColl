@@ -41,5 +41,8 @@ export default {
       return this.colors.includes(this.currentColor);
     },
   },
+  created() {
+    this.changeColor();
+  },
 };
 </script>
