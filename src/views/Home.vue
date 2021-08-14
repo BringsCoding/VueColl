@@ -26,17 +26,36 @@ export default {
     };
   },
   methods: {
+    UpdateStorage() {
+      window.localStorage.setItem(
+        "ColorSavedStorage",
+        JSON.stringify(this.colors)
+      );
+    },
     savecolor(color) {
       this.colors.push(color);
+      this.UpdateStorage();
     },
     deleteColor(color) {
       this.colors = this.colors.filter(
         (currentColot) => currentColot !== color
       );
+      this.UpdateStorage();
     },
     clear() {
       this.colors = [];
     },
+  },
+  created() {
+    const SaveColor = JSON.parse(
+      window.localStorage.getItem("ColorSavedStorage")
+    );
+
+    if (SaveColor !== null) {
+      this.colors = JSON.parse(
+        window.localStorage.getItem("ColorSavedStorage")
+      );
+    }
   },
 };
 
