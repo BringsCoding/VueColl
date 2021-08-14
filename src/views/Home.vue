@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <ClColorPicker @color="savecolor" colors="colors" />
-    <ClColorList @delete="deleteColor" :colors="colors" />
+    <ClColorList @delete="deleteColor" @clear="clear" :colors="colors" />
   </div>
 </template>
 
@@ -33,6 +33,9 @@ export default {
       this.colors = this.colors.filter(
         (currentColot) => currentColot !== color
       );
+    },
+    clear() {
+      this.colors = [];
     },
   },
 };
