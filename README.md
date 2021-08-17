@@ -1,5 +1,7 @@
 # coulette
 
+coulette App die mit VUE nachgebaut wurden ist.
+
 ## Project setup
 ```
 npm install
